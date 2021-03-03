@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  grpc-to-rest:
+    build: ./grpc-to-rest
+    ports:
+      - 8080:8080
+  grpc-to-rest-client:
+    build: ./grpc-to-rest-client
+    depends_on: 
+      - grpc-to-rest
